@@ -43,7 +43,6 @@ var Detector = {
 	addGetWebGLMessage: function ( parameters ) {
 
 		var parent, id, element;
-
 		parameters = parameters || {};
 
 		parent = parameters.parent !== undefined ? parameters.parent : document.body;

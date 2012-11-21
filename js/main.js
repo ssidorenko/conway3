@@ -18,11 +18,13 @@ var dead_material, alive_material;
 
 var tensor = new Array(T_LENGTH); // 3 dimensional array containing the cells status
 
-init();
-animate();
+window.onload = function () {
+    init();
+    animate();
+}
 
 function init(){
-    Detector.addGetWebGLMessage();    
+    Detector.addGetWebGLMessage({"parent":document.getElementById("container")});    
     init_3d();
     init_conways();
 }
@@ -45,7 +47,7 @@ function init_3d() {
     renderer = new THREE.WebGLRenderer();
     renderer.setSize( window.innerWidth, window.innerHeight );
 
-    document.body.appendChild( renderer.domElement );
+    document.getElementById("container").appendChild( renderer.domElement );
 
 }
 
