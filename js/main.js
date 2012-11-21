@@ -22,6 +22,7 @@ init();
 animate();
 
 function init(){
+    Detector.addGetWebGLMessage();    
     init_3d();
     init_conways();
 }
